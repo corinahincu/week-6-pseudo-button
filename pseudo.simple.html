@@ -1,0 +1,62 @@
+<!-- 
+  d. pseudo selectors 
+      -visual feedback
+      -dynamic styles
+      -element states (mouse jestures, touch, active, checked,..)
+      -40 pseudo selectors, sunt predefiniti, nu le putem inventa noi
+
+      * state selectors -> change styles based on STATE
+      :pseudo {
+        ei nu selecteaza un element anume, ei selecteaza o starea, care poate fi sau sa nu fie, ele seteaza o conditie de selectie, si daca acest element nu satisface acea conditie nici selectorul nu selecteaza
+      }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors | :pseudo - Button</title>
+  <style>
+    body {
+      background-color: #222;
+    }
+    .call-for-action {
+      border-bottom: 1px dashed #ccc;
+
+      font-family: Arial;
+      color: #999;
+      padding: 10px;
+    }
+
+    .btn {
+      color: white;
+      border: 2px solid white;
+      background-color: transparent;
+
+      font-size: 18px;
+      padding: 6px 12px 6px 12px;
+      margin-left: 6px;
+      margin-right: 6px;
+
+      /*new*/
+      border-radius: 20px;
+      transition: 0.25s;
+    }
+
+    /* PSEUDO SELECTOR*/
+    .btn:hover {
+      color: orange;
+      border-color: darkorange;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- form...   -->
+  <label class="call-for-action">
+    To start the training hit <button class="btn">this button</button> !
+  </label>
+  <!-- form...end   -->
+  
+</body>
+</html>
